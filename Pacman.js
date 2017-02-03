@@ -24,26 +24,26 @@ Pacman.prototype.draw = function(color) {
 	if (!this.mouthOpen){
 		switch(this.dir){
 			case UP:
-			var img = document.getElementById("scream");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dtu-u");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*11/18, 2*Math.PI-Math.PI*7/18, true);
 			break;
 
 			case DOWN:
-			var img = document.getElementById("scream");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dtu-d");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*29/18, 2*Math.PI-Math.PI*25/18, true);
 			break;
 
 			case LEFT:
-			var img = document.getElementById("scream");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dtu-l");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*10/9, 2*Math.PI-Math.PI*8/9, true);
 			break;
 
 			case RIGHT:
-			var img = document.getElementById("scream");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dtu-r");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI/9, 2*Math.PI-Math.PI*17/9, true);
 			break;
 
@@ -54,26 +54,26 @@ Pacman.prototype.draw = function(color) {
 	else {
 		switch(this.dir){
 			case UP:
-			var img = document.getElementById("scream1");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dto-u");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*7/9, 2*Math.PI-Math.PI*2/9, true);
 			break;
 
 			case DOWN:
-			var img = document.getElementById("scream1");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dto-d");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*16/9, 2*Math.PI-Math.PI*11/9, true);
 			break;
 
 			case LEFT:
-			var img = document.getElementById("scream1");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dto-l");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*23/18, 2*Math.PI-Math.PI*13/18, true);
 			break;
 
 			case RIGHT:
-			var img = document.getElementById("scream1");
-			ctx.drawImage(img,this.x-16,this.y-16);
+			var img = document.getElementById("dto-r");
+			ctx.drawImage(img,this.x-8,this.y-10);
 			//ctx.arc(this.x, this.y, this.radius, 2*Math.PI-Math.PI*5/18, 2*Math.PI-Math.PI*31/18, true);
 			break;
 

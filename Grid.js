@@ -57,7 +57,7 @@ Grid.prototype.toString = function() {
 Grid.prototype.draw = function() {
 	ctx.fillStyle = BG_COLOR;
 	ctx.fillRect(this.x, this.y, GRID_WIDTH, GRID_HEIGHT);
-	var gridType = this.gridType	;
+	var gridType = this.gridType;
 	if(gridType === undefined || gridType === EMPTY_GRID){
 		this.drawBean();
 		return;

@@ -27,7 +27,7 @@ var PINK = "#ff9cce";
 var CYAN = "#00ffde";
 var ORANGE = "#ffb847";
 var WEAK_COLOR = "#0031ff";
-var BLINKING_COLOR = "white";
+var BLINKING_COLOR = "black";
 
 // size of sprites
 var NORMAL_BEAN_RADIUS = 2;

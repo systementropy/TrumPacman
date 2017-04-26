@@ -355,10 +355,15 @@ function initFields () {
 /*====================Util Methods================*/
 //draw a circle
 function circle(ctx, cx, cy, radius) {
-
+	ctx.lineWidth = 1;
+	ctx.fillStyle = '#ffd700';
 	ctx.beginPath();
     ctx.arc(cx, cy, radius, 0, 2*Math.PI, true);
     ctx.fill();
+    
+    ctx.shadowBlur = 5;
+	ctx.strokeStyle = '#ffd700';
+	ctx.stroke();
 
 }
 

@@ -185,7 +185,7 @@ var noBeanIndex=noBean.length;
 
 
 // power beans in maze
-var powerBeans = [[0,0], [2,13], [16,4], [16,16], [2,5], [14,10]];
+var powerBeans = [[0,0], [2,13], [8,12], [4,4], [2,5], [7,10]];
 
 
 // ghost house
@@ -247,7 +247,7 @@ function initMaze(){
 
 function initFields () {
 	// body...
-	for (var i=6; i<10; i++){
+	for (var i=5; i<10; i++){
 		ghostHouse[ghostHouseIndex]=[i,9];
 		ghostHouseIndex++;
 	}

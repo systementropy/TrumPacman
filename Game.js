@@ -103,6 +103,12 @@ var mazeContent = [
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
  EMPTY_GRID, RIGHT_ONLY],
+
+[LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
+ EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
+ EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
+ EMPTY_GRID, RIGHT_ONLY],
+
 //row6
 [LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
@@ -114,15 +120,15 @@ var mazeContent = [
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
  EMPTY_GRID, RIGHT_ONLY],
 //row8
-[LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID, RIGHT_ONLY],
+[LEFT_BOTTOM, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, 
+ BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY,
+ BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY, BOTTOM_ONLY,
+ BOTTOM_ONLY, RIGHT_BOTTOM],
 //row9
-[LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID, RIGHT_ONLY],
+[LEFT_TOP, TOP_ONLY, TOP_ONLY, TOP_ONLY, TOP_ONLY, 
+ TOP_ONLY, TOP_ONLY, TOP_ONLY, TOP_ONLY, TOP_ONLY,
+ TOP_ONLY, TOP_ONLY, TOP_ONLY, TOP_ONLY, TOP_ONLY,
+ TOP_ONLY, RIGHT_TOP],
 //row10
 [LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
@@ -134,10 +140,10 @@ var mazeContent = [
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
  EMPTY_GRID, RIGHT_ONLY],
 //row12
-[LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
- EMPTY_GRID,RIGHT_ONLY],
+// [LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
+//  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
+//  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
+//  EMPTY_GRID,RIGHT_ONLY],
 //row13
 [LEFT_ONLY, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, 
  EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID, EMPTY_GRID,
@@ -248,100 +254,100 @@ function initFields () {
 
 
 	//fill up staticGrids[]
-	for (var i=0; i<2; i++){
-		for (var j=8; j<17; j++){
-			staticGrids[staticGridsIndex]=[i,j];
-			staticGridsIndex++;
-		}
-	}
-	for (var i=9; i<17; i++){
-		for (var j=0; j<4; j++){
-			staticGrids[staticGridsIndex]=[i,j];
-			staticGridsIndex++;
-		}
-	}
-	for (var i=2; i<6; i++){
-		for (var j=14; j<17; j++){
-			staticGrids[staticGridsIndex]=[i,j];
-			staticGridsIndex++;
-		}
-	}
+	// for (var i=0; i<2; i++){
+	// 	for (var j=8; j<17; j++){
+	// 		staticGrids[staticGridsIndex]=[i,j];
+	// 		staticGridsIndex++;
+	// 	}
+	// }
+	// for (var i=9; i<17; i++){
+	// 	for (var j=0; j<4; j++){
+	// 		staticGrids[staticGridsIndex]=[i,j];
+	// 		staticGridsIndex++;
+	// 	}
+	// }
+	// for (var i=2; i<6; i++){
+	// 	for (var j=14; j<17; j++){
+	// 		staticGrids[staticGridsIndex]=[i,j];
+	// 		staticGridsIndex++;
+	// 	}
+	// }
 
 	//fill up noBean[]
-	for(var i=0; i<2; i++){
-		for(var j=8; j<17; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for(var i=2; i<6; i++){
-		for(var j=14; j<17; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for(var i=9; i<17; i++){
-		for(var j=0; j<4; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for (var i=1; i<6; i++){
-		noBean[noBeanIndex]=[i,2];
-		noBeanIndex++;
-	}
-	for(var i=1; i<4; i+=2){
-		for(var j=4; j<7; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for (var j=8; j<13; j++){
-		noBean[noBeanIndex]=[3,j];
-		noBeanIndex++;
-	}
-	for (var j=1; j<7; j++){
-		noBean[noBeanIndex]=[7,j];
-		noBeanIndex++;
-	}
-	for (var i=5; i<10; i++){
-		for(var j=8; j<11; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for (var j=12; j<16; j++){
-		noBean[noBeanIndex]=[7,j];
-		noBeanIndex++;
-	}
-	for (var j=12; j<16; j++){
-		noBean[noBeanIndex]=[9,j];
-		noBeanIndex++;
-	}
-	for(var i=11; i<16; i+=2){
-		for(var j=5; j<8; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for(var i=11; i<16; i+=2){
-		for(var j=9; j<12; j++){
-			noBean[noBeanIndex]=[i,j];
-			noBeanIndex++;
-		}
-	}
-	for(var j=13; j<16; j++){
-		noBean[noBeanIndex]=[11, j];
-		noBeanIndex++;
-	}
-	for(var i=12; i<16; i++){
-		noBean[noBeanIndex]=[i, 15];
-		noBeanIndex++;
-	}
-	for(var i=13; i<17; i++){
-		noBean[noBeanIndex]=[i, 13];
-		noBeanIndex++;
-	}
+	// for(var i=0; i<2; i++){
+	// 	for(var j=8; j<17; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for(var i=2; i<6; i++){
+	// 	for(var j=14; j<17; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for(var i=9; i<17; i++){
+	// 	for(var j=0; j<4; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for (var i=1; i<6; i++){
+	// 	noBean[noBeanIndex]=[i,2];
+	// 	noBeanIndex++;
+	// }
+	// for(var i=1; i<4; i+=2){
+	// 	for(var j=4; j<7; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for (var j=8; j<13; j++){
+	// 	noBean[noBeanIndex]=[3,j];
+	// 	noBeanIndex++;
+	// }
+	// for (var j=1; j<7; j++){
+	// 	noBean[noBeanIndex]=[7,j];
+	// 	noBeanIndex++;
+	// }
+	// for (var i=5; i<10; i++){
+	// 	for(var j=8; j<11; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for (var j=12; j<16; j++){
+	// 	noBean[noBeanIndex]=[7,j];
+	// 	noBeanIndex++;
+	// }
+	// for (var j=12; j<16; j++){
+	// 	noBean[noBeanIndex]=[9,j];
+	// 	noBeanIndex++;
+	// }
+	// for(var i=11; i<16; i+=2){
+	// 	for(var j=5; j<8; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for(var i=11; i<16; i+=2){
+	// 	for(var j=9; j<12; j++){
+	// 		noBean[noBeanIndex]=[i,j];
+	// 		noBeanIndex++;
+	// 	}
+	// }
+	// for(var j=13; j<16; j++){
+	// 	noBean[noBeanIndex]=[11, j];
+	// 	noBeanIndex++;
+	// }
+	// for(var i=12; i<16; i++){
+	// 	noBean[noBeanIndex]=[i, 15];
+	// 	noBeanIndex++;
+	// }
+	// for(var i=13; i<17; i++){
+	// 	noBean[noBeanIndex]=[i, 13];
+	// 	noBeanIndex++;
+	// }
 }
 /*================END Initialization Methods==============*/
 

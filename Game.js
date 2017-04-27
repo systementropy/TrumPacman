@@ -3,15 +3,15 @@
 //////////////////////////////////////////////////////
 
 var canvasID = "myCanvas";
-var CANVAS_WIDTH = 510;
-var CANVAS_HEIGHT = 510;
+var CANVAS_WIDTH = 1020;
+var CANVAS_HEIGHT = 1020;
 var canvas = document.getElementById(canvasID);
 var ctx = canvas.getContext("2d");
 
 // game grid
-var GRID_WIDTH = 30;
-var GRID_HEIGHT = 30;
-var WALL_WIDTH = 3;
+var GRID_WIDTH = 60;
+var GRID_HEIGHT = 60;
+var WALL_WIDTH = 6;
 var numRows = CANVAS_WIDTH/GRID_HEIGHT;
 var numCols = CANVAS_HEIGHT/GRID_WIDTH;
 
